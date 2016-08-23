@@ -115,9 +115,9 @@ function ptf_setup() {
 function epic_treasure() {
   sudo apt -y install python3-pip gdb gdb-multiarch unzip foremost ipython silversearcher-ag
 
-  # Install Binjitsu
-  sudo apt -y install python2.7 python-pip python-dev git
-  sudo pip install --upgrade git+https://github.com/binjitsu/binjitsu.git
+  # Install pwntools 3.x
+  sudo apt -y install python2.7 python-pip python-dev git libssl-dev
+  sudo pip install --upgrade pwntools
   echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 
   cd $HOME
